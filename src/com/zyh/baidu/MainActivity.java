@@ -50,7 +50,7 @@ public class MainActivity extends Activity {
 				int y = scrollview.getScrollY();
 				Log.d("", "getTop=" + rl_et.getTop());
 				Log.d("", "" + y);
-				if (y < DIS) {
+				if (y < DIS && rl_et.getPaddingLeft()>=left && rl_et.getPaddingRight()>=right) {
 					ViewHelper.setAlpha(title_bg, y / DIS);
 					ViewHelper.setAlpha(wifi, 1 - y / DIS);
 					rl_et.setPadding(left+(int) (y * F), 8, right+(int) (y * F), 0);
